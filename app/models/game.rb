@@ -12,7 +12,6 @@ class Game < ActiveRecord::Base
   #validates :approved,    :presence => true
   validates :user_id,     :presence => true
 
-  belongs_to :user,            :class_name => 'User'
-  #has_many   :game_categories, :class_name => 'GameCategory'
-  has_and_belongs_to_many   :categories#,      :through => :game_categories
+  belongs_to :user, :class_name => 'User'
+  has_and_belongs_to_many :categories
 end
