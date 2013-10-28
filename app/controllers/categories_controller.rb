@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to edit_category_path(@category), :notice => 'Category has been successfully created!'
     else
-      flash.now[:error] = 'Problem creating category'
+      flash.now[:error] = 'Problem creating Category!'
       render :new
     end
   end
@@ -35,9 +35,9 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy
-      redirect_to categories_path, :notice => 'Categories has been successfully deleted!'
+      redirect_to categories_path, :notice => 'Category has been successfully deleted!'
     else
-      flash.now[:error] = 'Problem deleting Categories!'
+      flash.now[:error] = 'Problem deleting Category!'
       render :index
     end
   end

@@ -29,6 +29,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.1, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="foreigner (v1.4.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
@@ -50,9 +51,14 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.12, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.14.6, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.14.3, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.14.4, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-on-rails-matchers (v1.0.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.14.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.10, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v2.4.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v2.1.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
