@@ -4,6 +4,13 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 
+# Gems for development and test environments
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'validator_attachment'
+  gem 'rspec-on-rails-matchers'
+  gem 'shoulda-matchers'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
