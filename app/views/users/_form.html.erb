@@ -1,0 +1,9 @@
+<%= simple_form_for @user do |f| %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+    <%= f.input :email %>
+    <%= f.input :rank_id, :collection => Rank.all, :label_method => :name, :value_method => :id,  :prompt => 'Select Rank' %>
+
+    <%= f.button :submit, "#{f.object.new_record? ? "Submit" : "Update"} rank", class: "btn btn-primary" %>
+<% end %>

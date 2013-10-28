@@ -1,0 +1,22 @@
+<%= link_to 'New Category', new_category_path %>
+
+<table class='table-striped'>
+  <thead>
+  <th>Id</th>
+  <th>Code</th>
+  <th>Name</th>
+  <th></th>
+  </thead>
+
+  <tbody>
+  <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= category.code %></td>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Edit', category_path(category) %></td>
+        <td><%= link_to 'Delete', category_path(category), :method => :delete %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "bootstrap";
+
+@import "bootstrap-responsive";
+
+
+.nav li.dropdown ul.dropdown-menu li:HOVER ul {
+  display:block;
+  position:absolute;
+  left:100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.nav li.dropdown ul.dropdown-menu ul {
+  display: none;
+  float:right;
+  position: relative;
+  top: auto;
+  margin-top: -30px;
+}
+
+/*.navbar .dropdown-menu.submenu:after {*/
+/*content: '';*/
+/*display: inline-block;*/
+/*border-left: 6px solid transparent;*/
+/*border-right: 6px solid transparent;*/
+/*border-bottom: 6px solid white;*/
+/*position: absolute;*/
+/*top: 0px;*/
+/*left: 10px;*/
+/*}*/
+
+.navbar .dropdown-menu.submenu:after {
+  @extend .dropdown-menu:after;
+  display: none;
+}
+
+.navbar .dropdown-menu.submenu:before {
+  @extend .dropdown-menu:before;
+  display: none;
+}
+
+input, textarea, select, .uneditable-input {
+  @extend input;
+  margin-bottom: 3px;
+
+}
+
+/*.navbar .dropdown-menu.submenu:before {*/
+/*content: '';*/
+/*display: inline-block;*/
+/*border-left: 7px solid transparent;*/
+/*border-right: 7px solid transparent;*/
+/*border-bottom: 7px solid #ccc;*/
+/*border-bottom-color: white;*/
+/*position: absolute;*/
+/*top: 0px;*/
+/*left: 9px;*/
+/*}*/
+
+label.inline {
+  @extend label;
+  display: inline;
+}

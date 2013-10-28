@@ -1,0 +1,17 @@
+<table class='table table-striped'>
+  <thead>
+  <th>Title</th>
+  <th>Description</th>
+  <th>User</th>
+  </thead>
+
+  <tbody>
+  <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.description %></td>
+        <td><%= game.user.username %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

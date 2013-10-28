@@ -1,0 +1,21 @@
+<legend>Users</legend>
+
+<table class='table table-striped'>
+  <thead>
+  <th>ID</th>
+  <th>Username</th>
+  <th>Email</th>
+  <th>Rank</th>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.username %></td>
+    <td><%= user.email %></td>
+    <td><%= user.rank.code %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

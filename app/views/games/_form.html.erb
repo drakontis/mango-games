@@ -1,0 +1,9 @@
+<%= simple_form_for @game do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+
+    <%= f.association :categories, :multiple => true %>
+
+    <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
+    <%= f.button :submit, "#{f.object.new_record? ? "Create" : "Update"}", class: "btn btn-primary" %>
+<% end %>
