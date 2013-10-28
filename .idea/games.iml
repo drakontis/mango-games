@@ -50,6 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.12, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-on-rails-matchers (v1.0.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.10, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v2.1.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
@@ -59,6 +60,7 @@
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.37, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.2.1, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="validator_attachment (v1.1.1, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
