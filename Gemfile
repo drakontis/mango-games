@@ -10,6 +10,7 @@ group :development, :test do
   gem 'validator_attachment'
   gem 'rspec-on-rails-matchers'
   gem 'shoulda-matchers'
+  gem 'factory_girl'
 end
 
 # Gems used only for assets and not required

@@ -25,7 +25,7 @@ class RanksController < ApplicationController
   def update
     @rank = Rank.find(params[:id])
     if @rank.update_attributes!(params[:rank])
-      redirect_to edit_ranks_path(:id => @rank.id), :notice => "Rank has been successfully updated!"
+      redirect_to edit_rank_path(:id => @rank.id), :notice => "Rank has been successfully updated!"
     else
       flash.now[:error] = "Problem updating Rank!"
       render :edit
