@@ -4,6 +4,5 @@ class Category < ActiveRecord::Base
 
   validates :code, :presence => true, :uniqueness => true
 
-  #has_many :game_categories, :class_name => 'GameCategory'
-  has_and_belongs_to_many :games#,           :through => :game_categories
+  has_and_belongs_to_many :games
 end
