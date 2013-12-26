@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.where(:approved => true).all
   end
 
   def new
@@ -15,7 +15,8 @@ class GamesController < ApplicationController
       redirect_to game_path(@game), :notice => 'Game has been successfully created!'
     else
       @categories = Category.all
-      render :new, :alert => 'Problem creating game!'
+      flash.now[:error] = 'Problem creating Game!'
+      render :new
     end
   end
 
