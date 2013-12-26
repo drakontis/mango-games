@@ -9,7 +9,7 @@ ranks = [
 ]
 
 ranks.each do |code, name|
-  rank = Rank.where(:code => code).first_or_create
+  rank = Rank.where(:code => code).first_or_initialize
 
   if rank.new_record?
     rank.name = name
