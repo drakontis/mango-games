@@ -1,11 +1,24 @@
-<table>
-  <thead>
-  <th>Title</th>
-  <th>Description</th>
-  </thead>
+<legend>
+  <div class='wrapper'>
+    <div class='game_title'><%= @game.title %></div>
+    <div class='game_user'><%= link_to @game.user.username, users_path(@game.user) %></div>
+  </div>
+</legend>
 
-  <tr>
-    <td><%= @game.title %></td>
-    <td><%= @game.description %></td>
-  </tr>
-</table>
+<fieldset>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <div class="span8">
+        <span>
+          <%= @game.description %>
+        </span>
+      </div>
+
+      <div class="span4">
+        Photos here
+      </div>
+    </div>
+  </div>
+</fieldset>

@@ -8,7 +8,7 @@
   <tbody>
   <% @games.each do |game| %>
       <tr>
-        <td><%= game.title %></td>
+        <td><%= link_to game.title, game_path(game) %></td>
         <td><%= game.description %></td>
         <td><%= game.user.username %></td>
       </tr>

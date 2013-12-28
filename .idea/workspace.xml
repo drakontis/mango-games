@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88674cca-1e5d-497d-889b-27a0764e0a56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/games.iml" afterPath="$PROJECT_DIR$/.idea/games.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/games/index.html.erb" afterPath="$PROJECT_DIR$/app/views/games/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/games/show.html.erb" afterPath="$PROJECT_DIR$/app/views/games/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -22,7 +19,7 @@
     <file path="/fragment.rb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1388076708281" ignored="false" />
     <file path="/_form.html.erb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1382912294880" ignored="false" />
     <file path="/index.html.erb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1388082552683" ignored="false" />
-    <file path="/show.html.erb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1388083402518" ignored="false" />
+    <file path="/show.html.erb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1388236323901" ignored="false" />
     <file path="/application.js" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1378053964496" ignored="false" />
     <file path="/application.html.erb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1382963401425" ignored="false" />
     <file path="/20130901170544_create_users.rb" changelist="88674cca-1e5d-497d-889b-27a0764e0a56" time="1378063700581" ignored="false" />
@@ -67,37 +64,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/games/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="18" column="23" selection-start="400" selection-end="400" vertical-scroll-proportion="0.30716723">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="480" selection-end="480" vertical-scroll-proportion="0.3156146">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="games.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="1" selection-start="1801" selection-end="1808" vertical-scroll-proportion="0.0">
+            <state line="70" column="6" selection-start="1927" selection-end="2019" vertical-scroll-proportion="-17.25">
               <folding />
             </state>
           </provider>
@@ -134,9 +113,9 @@
         <option value="$PROJECT_DIR$/db/seeds/seed_users.rb" />
         <option value="$PROJECT_DIR$/app/views/games/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/games.css.scss" />
         <option value="$PROJECT_DIR$/app/views/games/show.html.erb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -686,14 +665,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="30" width="1922" height="1054" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1" y="30" width="1922" height="1054" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15261473" sideWeight="0.672043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15261473" sideWeight="0.672043" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29032257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -767,13 +746,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/controllers/categories_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="17" selection-start="1994" selection-end="2244" vertical-scroll-proportion="1.2292359">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/games_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="45" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
@@ -851,30 +823,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="1" selection-start="1801" selection-end="1808" vertical-scroll-proportion="0.0">
+        <state line="19" column="5" selection-start="480" selection-end="480" vertical-scroll-proportion="0.3156146">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/games.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+        <state line="13" column="21" selection-start="191" selection-end="191" vertical-scroll-proportion="0.21594684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="1" selection-start="1801" selection-end="1808" vertical-scroll-proportion="0.8504983">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="6" selection-start="1927" selection-end="2019" vertical-scroll-proportion="-17.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/games/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="480" selection-end="480" vertical-scroll-proportion="0.3156146">
+        <state line="18" column="23" selection-start="400" selection-end="400" vertical-scroll-proportion="0.30716723">
           <folding />
         </state>
       </provider>

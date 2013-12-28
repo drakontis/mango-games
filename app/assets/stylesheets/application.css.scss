@@ -76,3 +76,7 @@ label.inline {
   @extend label;
   display: inline;
 }
+
+.wrapper {
+  overflow: hidden; /* add this to contain floated children */
+}
