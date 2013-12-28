@@ -1,0 +1,14 @@
+<div class='comment_details_div' id='comment_details_div'>
+  <header>
+    <div class='wrapper'>
+      <div class='comment_user'>
+      <%= link_to comment.user.username, users_path(comment.user) %>
+      </div>
+      <div class='comment_date'>
+        <%= comment.created_at.strftime("%d-%b-%Y %H:%M") %>
+      </div>
+    </div>
+  </header>
+
+  <span><%= comment.body %></span>
+</div>

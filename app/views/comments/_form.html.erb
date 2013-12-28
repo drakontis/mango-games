@@ -1,0 +1,6 @@
+<%= form_tag ({:controller => 'comments', :action => 'create', :method => :post}), :remote => true, :id => 'comment_to_game', :html => {"data-type" => :json} do %>
+    <%= text_area_tag "comment[body]", '', :placeholder => 'Leave Comment' %>
+    <%= hidden_field_tag "comment[game_id]", @game.id %>
+
+    <%= submit_tag 'Add Comment', :class => 'btn btn-success btn-sm' %>
+<% end %>

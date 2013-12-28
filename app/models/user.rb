@@ -7,8 +7,9 @@ class User < ActiveRecord::Base
 
   attr_accessible :username, :password, :email, :rank, :rank_id, :password_confirmation
 
-  belongs_to :rank,  :class_name => 'Rank'
-  has_many   :games, :class_name => 'Game'
+  belongs_to :rank,     :class_name => 'Rank'
+  has_many   :games,    :class_name => 'Game'
+  has_many   :comments, :class_name => 'Comment'
 
   validates :username, :presence => true,    :uniqueness => true
   validates :password, :confirmation => true

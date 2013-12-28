@@ -10,6 +10,7 @@ describe Game do
   context "Associations" do
     it { should have_and_belong_to_many :categories }
     it { should belong_to :user                     }
+    it { should have_many :comments                 }
   end
 
   context "Mass assignment" do

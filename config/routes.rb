@@ -1,9 +1,10 @@
 Games::Application.routes.draw do
 
-  resources :ranks, :except => [:show]
+  resources :ranks,      :except => [:show]
   resources :categories, :except => [:show]
-  resources :users, :except => [:show]
+  resources :users,      :except => [:show]
   resources :games
+  resources :comments,   :only => [:create]
 
   controller :sessions do
     get 'login' => :new

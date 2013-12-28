@@ -11,9 +11,7 @@
 
     <div class="row-fluid">
       <div class="span8">
-        <span>
-          <%= @game.description %>
-        </span>
+        <span><%= simple_format @game.description %></span>
       </div>
 
       <div class="span4">
@@ -22,3 +20,22 @@
     </div>
   </div>
 </fieldset>
+
+<legend></legend>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+
+    <div class="span8">
+      <%= render :partial => 'comments/form' %>
+
+      <div id='comments_to_game_div'>
+        <% @game.comments.order("created_at DESC").each do |comment| %>
+            <%= render :partial => 'comments/comment_details', :locals => {:comment => comment} %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
