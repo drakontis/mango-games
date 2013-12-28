@@ -32,6 +32,7 @@
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.1, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.2.0, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="foreigner (v1.4.2, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.5, RVM: ruby-1.9.3-p448 [games]) [gem]" level="application" />
