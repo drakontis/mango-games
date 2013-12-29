@@ -1,12 +1,12 @@
 <legend>
   <div class='wrapper'>
-    <div class='game_title'><%= @game.title %></div>
-    <div class='game_categories'>
+    <div class='game_title_div'><%= @game.title %></div>
+    <div class='game_categories_div'>
       <% @game.categories.each do |category| %>
       <%= category.name %>
       <% end %>
     </div>
-    <div class='game_user'><%= link_to @game.user.username, users_path(@game.user) %></div>
+    <div class='game_user_div'><%= link_to @game.user.username, users_path(@game.user) %></div>
   </div>
 </legend>
 

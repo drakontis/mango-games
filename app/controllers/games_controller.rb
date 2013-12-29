@@ -23,4 +23,12 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
   end
+
+  def edit
+    @game = Game.find(params[:id])
+  end
+
+  def not_approved
+    @games = Game.where(:approved => false).all
+  end
 end

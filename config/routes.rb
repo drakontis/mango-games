@@ -3,8 +3,10 @@ Games::Application.routes.draw do
   resources :ranks,      :except => [:show]
   resources :categories, :except => [:show]
   resources :users,      :except => [:show]
-  resources :games
   resources :comments,   :only => [:create]
+  resources :games do
+    get 'not_approved', :on => :collection
+  end
 
   controller :sessions do
     get 'login' => :new

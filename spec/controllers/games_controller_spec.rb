@@ -62,6 +62,24 @@ describe GamesController do
       assigned_games.should include(game)
       assigned_games.should_not include(game2)
     end
+
+    it 'should get only the not approved games' do
+      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game.categories << @category
+      game.save!
+
+      game2 = Game.new(:title => 'krifto2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
+      game2.categories << @category
+      game2.save!
+
+      get :not_approved
+      assigned_games = assigns(:games)
+      assigned_games.should_not be_nil
+      assigned_games.should be_a(Array)
+      assigned_games.should_not be_empty
+      assigned_games.should_not include(game)
+      assigned_games.should include(game2)
+    end
   end
 
   context '#create' do
