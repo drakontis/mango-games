@@ -2,6 +2,13 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.association :categories, :multiple => true %>
-    <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
+    <% if f.object.new_record? %>
+        <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
+    <% end %>
+
+    <% if User.find(session[:user_id]).rank.code >= 15 %>
+        <%= f.input :approved %>
+    <% end %>
+
     <%= f.button :submit, "#{f.object.new_record? ? "Create" : "Update"}", :class => "btn btn-success" %>
 <% end %>

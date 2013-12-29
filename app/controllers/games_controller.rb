@@ -28,6 +28,18 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
+  def update
+    @game = Game.find(params[:id])
+
+    if @game.update_attributes!(params[:game])
+      redirect_to game_path(@game), :notice => 'Game has been successfully updated!'
+    else
+      @categories = Category.all
+      flash.now[:error] = 'Problem updating Game!'
+      render :edit
+    end
+  end
+
   def not_approved
     @games = Game.where(:approved => false).all
   end

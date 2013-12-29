@@ -104,7 +104,7 @@ describe CategoriesController do
       category = Category.new(:code => 'code', :name => 'name')
       category.save.should be_true
 
-      post :update, :id => category.id, :category => {:code => 'another_code'}
+      put :update, :id => category.id, :category => {:code => 'another_code'}
 
       category.reload
       category.code.should == 'another_code'
@@ -114,7 +114,7 @@ describe CategoriesController do
       category = Category.new(:code => 'code', :name => 'name')
       category.save.should be_true
 
-      post :update, :id => category.id, :category => {:name => 'another_name'}
+      put :update, :id => category.id, :category => {:name => 'another_name'}
 
       category.reload
       category.name.should == 'another_name'
@@ -124,7 +124,7 @@ describe CategoriesController do
       category = Category.new(:code => 'code', :name => 'name')
       category.save.should be_true
 
-      post :update, :id => category.id, :category => {:name => 'another_name'}
+      put :update, :id => category.id, :category => {:name => 'another_name'}
 
       response.status.should redirect_to edit_category_path(:id => category.id)
       flash.notice.should == 'Category has been successfully updated!'
@@ -135,7 +135,7 @@ describe CategoriesController do
       category.save.should be_true
 
       Category.any_instance.stub(:update_attributes!).and_return false
-      post :update, :id => category.id
+      put :update, :id => category.id
 
       response.should render_template :edit
       flash[:error].should == 'Problem updating Category!'

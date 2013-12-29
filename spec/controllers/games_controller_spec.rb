@@ -167,4 +167,62 @@ describe GamesController do
       assigned_game.should == game
     end
   end
+
+  context '#edit' do
+    it 'should get edit' do
+      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game.categories << @category
+      game.save!
+
+      get :edit, :id => game.id
+
+      assigned_game = assigns(:game)
+      assigned_game.should_not be_nil
+      assigned_game.should_not be_new_record
+      assigned_game.should == game
+    end
+  end
+
+  context '#update' do
+    before do
+      @game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      @game.categories << @category
+      @game.save!
+    end
+
+    it "should update an existing game's title" do
+      put :update, :id => @game.id, :game => {:title => 'kinigito'}
+
+      @game.reload
+      @game.title.should == 'kinigito'
+    end
+
+    it "should update an existing game's description" do
+      put :update, :id => @game.id, :game => {:description => 'perigrafi kinigito'}
+
+      @game.reload
+      @game.description.should == 'perigrafi kinigito'
+    end
+
+    it "should update an existing game's approved" do
+      put :update, :id => @game.id, :game => {:approved => false}
+      @game.reload
+      @game.approved.should be_false
+    end
+
+    it 'should redirect to edit game path' do
+      put :update, :id => @game.id, :game => {:title => 'another_name'}
+
+      response.status.should redirect_to game_path(:id => @game.id)
+      flash.notice.should == 'Game has been successfully updated!'
+    end
+
+    it 'should render edit if update fails' do
+      Game.any_instance.stub(:update_attributes!).and_return false
+      put :update, :id => @game.id
+
+      response.should render_template :edit
+      flash[:error].should == 'Problem updating Game!'
+    end
+  end
 end
