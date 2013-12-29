@@ -14,8 +14,8 @@
         <td><%= rank.id %></td>
         <td><%= rank.code %></td>
         <td><%= rank.name %></td>
-        <td><%= link_to 'Edit', rank_path(rank) %></td>
-        <td><%= link_to 'Delete', rank_path(rank), :method => :delete %></td>
+        <td><%= link_to 'Edit', rank_path(rank), :class => 'btn btn-warning' %></td>
+        <td><%= link_to 'Delete', rank_path(rank), :method => :delete, :class => 'btn btn-danger' %></td>
       </tr>
   <% end %>
   </tbody>

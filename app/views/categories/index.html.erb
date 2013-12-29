@@ -14,8 +14,8 @@
         <td><%= category.id %></td>
         <td><%= category.code %></td>
         <td><%= category.name %></td>
-        <td><%= link_to 'Edit', category_path(category) %></td>
-        <td><%= link_to 'Delete', category_path(category), :method => :delete %></td>
+        <td><%= link_to 'Edit', category_path(category), :class => 'btn btn-warning' %></td>
+        <td><%= link_to 'Delete', category_path(category), :method => :delete, :class => 'btn btn-danger' %></td>
       </tr>
   <% end %>
   </tbody>

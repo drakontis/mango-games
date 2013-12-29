@@ -1,5 +1,5 @@
 <%= simple_form_for @rank do |f| %>
     <%= f.input :code %>
     <%= f.input :name %>
-    <%= f.button :submit, "#{f.object.new_record? ? "Create" : "Update"}", class: "btn btn-primary" %>
+    <%= f.button :submit, "#{f.object.new_record? ? "Create" : "Update"}", class: "btn btn-success" %>
 <% end %>
