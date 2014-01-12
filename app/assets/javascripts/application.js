@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require chosen-jquery
+//= require tinymce-jquery
 //= require_tree .
 
 // enable chosen js
