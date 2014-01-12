@@ -25,6 +25,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'bootstrap-sass'
+
+  gem 'chosen-rails'
 end
 
 gem 'jquery-rails'

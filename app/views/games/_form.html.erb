@@ -1,7 +1,7 @@
 <%= simple_form_for @game do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.association :categories, :multiple => true %>
+    <%= f.association :categories, :multiple => true, :input_html => {:class => 'has-chosen'} %>
     <% if f.object.new_record? %>
         <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
     <% end %>

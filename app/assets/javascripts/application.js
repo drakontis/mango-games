@@ -14,4 +14,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require chosen-jquery
 //= require_tree .
+
+// enable chosen js
+$(function($){
+    $('.has-chosen').chosen();
+});
