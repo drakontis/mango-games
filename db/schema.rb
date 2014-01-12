@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131228160922) do
+ActiveRecord::Schema.define(:version => 20140112002421) do
 
   create_table "categories", :force => true do |t|
     t.string   "code",       :null => false
@@ -53,6 +53,20 @@ ActiveRecord::Schema.define(:version => 20131228160922) do
   add_index "games", ["title"], :name => "games_title_uidx", :unique => true
   add_index "games", ["user_id"], :name => "games_user_fk"
 
+  create_table "images", :force => true do |t|
+    t.integer  "user_id",            :null => false
+    t.integer  "game_id",            :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "images", ["game_id"], :name => "images_game_fk"
+  add_index "images", ["user_id"], :name => "images_user_fk"
+
   create_table "ranks", :force => true do |t|
     t.integer  "code",       :null => false
     t.string   "name"
@@ -81,6 +95,9 @@ ActiveRecord::Schema.define(:version => 20131228160922) do
   add_foreign_key "comments", "users", :name => "comments_user_fk"
 
   add_foreign_key "games", "users", :name => "games_user_fk"
+
+  add_foreign_key "images", "games", :name => "images_game_fk"
+  add_foreign_key "images", "users", :name => "images_user_fk"
 
   add_foreign_key "users", "ranks", :name => "users_rank_fk"
 

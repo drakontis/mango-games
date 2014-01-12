@@ -32,6 +32,10 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -60,6 +64,11 @@ GEM
     mime-types (1.25)
     multi_json (1.7.9)
     mysql2 (0.3.13)
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -135,6 +144,7 @@ DEPENDENCIES
   foreigner
   jquery-rails
   mysql2
+  paperclip (~> 3.0)
   rails (= 3.2.12)
   rspec-on-rails-matchers
   rspec-rails

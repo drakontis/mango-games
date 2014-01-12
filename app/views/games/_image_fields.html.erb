@@ -1,0 +1,5 @@
+<div class='nested_fields'>
+  <%= f.file_field :image %>
+  <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
+  <%= link_to_remove_fields "remove", f %>
+</div>

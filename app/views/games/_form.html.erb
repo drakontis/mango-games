@@ -6,6 +6,11 @@
         <%= f.input :user_id, :as => :hidden, :input_html => { :value => session[:user_id] } %>
     <% end %>
 
+    <%= f.simple_fields_for :images do |builder| %>
+        <%= render "image_fields", :f => builder %>
+    <% end %>
+    <%= link_to_add_fields "Add Image", f, :images %>
+
     <% if User.find(session[:user_id]).rank.code >= 15 %>
         <%= f.input :approved %>
     <% end %>

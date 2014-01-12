@@ -3,7 +3,7 @@
     <div class='game_title_div'><%= @game.title %></div>
     <div class='game_categories_div'>
       <% @game.categories.each do |category| %>
-      <%= category.name %>
+          <%= category.name %>
       <% end %>
     </div>
     <div class='game_user_div'><%= link_to @game.user.username, users_path(@game.user) %></div>
@@ -20,14 +20,18 @@
       </div>
 
       <div class="span4">
-        Photos here
+        <% @game.images.each_with_index do |image, index| %>
+            <p>
+              <%= image_tag image.image.url %>
+              <%= "Image-#{index+1}" %>
+            </p>
+        <% end %>
       </div>
     </div>
   </div>
 </fieldset>
 
 <legend></legend>
-
 
 <div class="container-fluid">
   <div class="row-fluid">

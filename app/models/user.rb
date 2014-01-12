@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   belongs_to :rank,     :class_name => 'Rank'
   has_many   :games,    :class_name => 'Game'
   has_many   :comments, :class_name => 'Comment'
+  has_many   :images,   :class_name => 'Image'
 
   validates :username, :presence => true,    :uniqueness => true
   validates :password, :confirmation => true
