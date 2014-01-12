@@ -1,6 +1,6 @@
 <%= simple_form_for @game do |f| %>
     <%= f.input :title %>
-    <%= f.input :description, :rows => 40, :cols => 120, :input_html => { :class => "tinymce"} %>
+    <%= text_area_tag 'game[description]', '', :class => "tinymce", :rows => 25, :cols => 80 %>
     <%= tinymce %>
     <%= f.association :categories, :multiple => true, :input_html => {:class => 'has-chosen'} %>
     <% if f.object.new_record? %>
