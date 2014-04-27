@@ -12,6 +12,7 @@ describe Game do
     it { should belong_to :user                     }
     it { should have_many :comments                 }
     it { should have_many :images                   }
+    it { should have_many :ratings                  }
   end
 
   context "Mass assignment" do

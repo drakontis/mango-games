@@ -1,9 +1,10 @@
 Games::Application.routes.draw do
 
-  resources :ranks,      :except => [:show]
-  resources :categories, :except => [:show]
-  resources :users,      :except => [:show]
-  resources :comments,   :only => [:create]
+  resources :ranks,        :except => [:show]
+  resources :categories,   :except => [:show]
+  resources :users,        :except => [:show]
+  resources :comments,     :only => [:create]
+  resources :game_ratings, :only => [:create]
   resources :games do
     get 'not_approved', :on => :collection
   end

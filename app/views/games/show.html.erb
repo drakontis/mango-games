@@ -31,6 +31,10 @@
   </div>
 </fieldset>
 
+<div class="star_rating">
+  <%= render :partial => 'game_ratings/star_rating', :locals => {:game => @game} %>
+</div>
+
 <legend></legend>
 
 <div class="container-fluid">

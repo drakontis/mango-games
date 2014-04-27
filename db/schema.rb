@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140112002421) do
+ActiveRecord::Schema.define(:version => 20140427110718) do
 
   create_table "categories", :force => true do |t|
     t.string   "code",       :null => false
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(:version => 20140112002421) do
 
   add_index "comments", ["game_id"], :name => "comments_game_fk"
   add_index "comments", ["user_id"], :name => "comments_user_fk"
+
+  create_table "game_ratings", :force => true do |t|
+    t.integer  "score",      :null => false
+    t.integer  "game_id",    :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "game_ratings", ["game_id", "user_id"], :name => "game_ratings_game_user_uidx", :unique => true
+  add_index "game_ratings", ["user_id"], :name => "game_ratings_user_fk"
 
   create_table "games", :force => true do |t|
     t.string   "title",                          :null => false
@@ -93,6 +104,9 @@ ActiveRecord::Schema.define(:version => 20140112002421) do
 
   add_foreign_key "comments", "games", :name => "comments_game_fk"
   add_foreign_key "comments", "users", :name => "comments_user_fk"
+
+  add_foreign_key "game_ratings", "games", :name => "game_ratings_game_fk"
+  add_foreign_key "game_ratings", "users", :name => "game_ratings_user_fk"
 
   add_foreign_key "games", "users", :name => "games_user_fk"
 

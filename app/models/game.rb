@@ -17,7 +17,12 @@ class Game < ActiveRecord::Base
   belongs_to :user,   :class_name => 'User'
   has_many :comments, :class_name => 'Comment'
   has_many :images,   :class_name => 'Image'
+  has_many :ratings,  :class_name => 'GameRating'
   has_and_belongs_to_many :categories
 
   accepts_nested_attributes_for :images
+
+  def average_rating
+    ratings.size.zero? ? 0 : (ratings.sum(:score).to_f / ratings.size)
+  end
 end
