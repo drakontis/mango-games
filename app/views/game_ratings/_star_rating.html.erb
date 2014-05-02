@@ -1,1 +1,5 @@
-<div id="star-rating" data-score=<%= game.average_rating %> data-game_id=<%= game.id %>></div>
+<% if div_id == 'star-rating' %>
+    <div id="star-rating" data-game_id=<%= game.id %>></div>
+<% elsif div_id == 'average-rating' %>
+    <div id="average-rating" data-score=<%= game.average_rating %> data-game_id=<%= game.id %>></div>
+<% end %>

@@ -29,16 +29,27 @@ function add_fields(link, association, content) {
 
 jQuery(function($){
     star_rating_with_raty()
+
+    average_rating();
 });
+
+function average_rating(){
+
+    $('#average-rating').raty({
+        readOnly: true,
+        path: '/assets',
+        halfShow : true,
+        score: function() {
+            return $(this).attr('data-score');
+        }
+    });
+}
 
 function star_rating_with_raty(){
     $('#star-rating').raty({
         readOnly: false,
         path: '/assets',
         halfShow : true,
-        score: function() {
-            return $(this).attr('data-score');
-        },
 
         click: function(score, evt) {
             var game_id = $(this).attr('data-game_id');
@@ -56,9 +67,8 @@ function create_rating_ajax(score, game_id){
         dataType: 'html',
         data: { score: score, game_id: game_id },
         success: function(data){
-            alert('done');
-            $(".star_rating").html(data);
-            star_rating_with_raty();
+            $(".average_star_rating").html(data);
+            average_rating();
 
             return false;
         }

@@ -10,6 +10,10 @@
   </div>
 </legend>
 
+<div class="average_star_rating">
+  <%= render :partial => 'game_ratings/star_rating', :locals => {:game => @game, :div_id => "average-rating"} %>
+</div>
+
 <fieldset>
 
   <div class="container-fluid">
@@ -31,16 +35,17 @@
   </div>
 </fieldset>
 
-<div class="star_rating">
-  <%= render :partial => 'game_ratings/star_rating', :locals => {:game => @game} %>
-</div>
-
 <legend></legend>
 
 <div class="container-fluid">
   <div class="row-fluid">
 
+
+
     <div class="span8">
+      <div class="star_rating">
+        <%= render :partial => 'game_ratings/star_rating', :locals => {:game => @game, :div_id => 'star-rating'} %>
+      </div>
       <%= render :partial => 'comments/form' %>
 
       <div id='comments_to_game_div'>

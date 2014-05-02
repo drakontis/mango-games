@@ -10,7 +10,7 @@ class GameRatingsController < ApplicationController
     end
 
     if rating.save
-      render :partial => 'game_ratings/star_rating', :locals => {:game => rating.game}
+      render :partial => 'game_ratings/star_rating', :locals => {:game => rating.game, :div_id => 'average-rating'}
     else
       render :nothing => true
     end
