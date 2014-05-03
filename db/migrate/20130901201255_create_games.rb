@@ -1,10 +1,11 @@
 class CreateGames < ActiveRecord::Migration
   def change
     create_table :games do |t|
-      t.string   :title,       :null => false
-      t.text     :description, :null => false
-      t.boolean  :approved,    :null => false, :default => false
-      t.integer  :user_id,     :null => false
+      t.string   :title,        :null => false
+      t.text     :description,  :null => false
+      t.text     :instructions, :null => false
+      t.boolean  :approved,     :null => false, :default => false
+      t.integer  :user_id,      :null => false
 
       t.timestamps
     end

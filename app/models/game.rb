@@ -2,6 +2,7 @@ class Game < ActiveRecord::Base
 
   attr_accessible :title,
                   :description,
+                  :instructions,
                   :approved,
                   :user,
                   :user_id,
@@ -9,10 +10,11 @@ class Game < ActiveRecord::Base
                   :images,
                   :images_attributes
 
-  validates :title,       :presence => true, :uniqueness => true
-  validates :description, :presence => true
+  validates :title,        :presence => true, :uniqueness => true
+  validates :description,  :presence => true
   #validates :approved,    :presence => true
-  validates :user_id,     :presence => true
+  validates :user_id,      :presence => true
+  validates :instructions, :presence => true
 
   belongs_to :user,   :class_name => 'User'
   has_many :comments, :class_name => 'Comment'

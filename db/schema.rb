@@ -53,12 +53,13 @@ ActiveRecord::Schema.define(:version => 20140427110718) do
   add_index "game_ratings", ["user_id"], :name => "game_ratings_user_fk"
 
   create_table "games", :force => true do |t|
-    t.string   "title",                          :null => false
-    t.text     "description",                    :null => false
-    t.boolean  "approved",    :default => false, :null => false
-    t.integer  "user_id",                        :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.string   "title",                           :null => false
+    t.text     "description",                     :null => false
+    t.text     "instructions",                    :null => false
+    t.boolean  "approved",     :default => false, :null => false
+    t.integer  "user_id",                         :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   add_index "games", ["title"], :name => "games_title_uidx", :unique => true

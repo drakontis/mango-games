@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-if Rails.env = 'test'
+if Rails.env == 'test'
   $: << "#{Rails.root}/db/test_seeds"
 
   load 'seed_test_ranks.rb'

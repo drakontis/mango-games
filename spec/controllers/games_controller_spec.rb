@@ -44,11 +44,11 @@ describe GamesController do
     end
 
     it 'should get only the approved games' do
-      game = Game.new(:title => 'kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game = Game.new(:title => 'kinigito', :instructions => 'odigies gia to kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
       game.categories << @category
       game.save!
 
-      game2 = Game.new(:title => 'kinigito2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
+      game2 = Game.new(:title => 'kinigito2',  :instructions => 'odigies gia to kinigito2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
       game2.categories << @category
       game2.save!
 
@@ -62,11 +62,11 @@ describe GamesController do
     end
 
     it 'should get only the not approved games' do
-      game = Game.new(:title => 'kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game = Game.new(:title => 'kinigito', :instructions => 'odigies gia to kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
       game.categories << @category
       game.save!
 
-      game2 = Game.new(:title => 'kinigito2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
+      game2 = Game.new(:title => 'kinigito2', :instructions => 'odigies gia to kinigito', :description => 'perigrafi krifto2', :approved => false, :user => @user)
       game2.categories << @category
       game2.save!
 
@@ -82,7 +82,7 @@ describe GamesController do
 
   context '#create' do
     it 'should create a new game' do
-      game_attributes = {:title => 'kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+      game_attributes = {:title => 'kinigito', :instructions => 'odigies gia to kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
 
       lambda do
         post :create, :game => game_attributes
@@ -100,7 +100,7 @@ describe GamesController do
     end
 
     it 'should redirect_to edit_game_path' do
-      game_attributes = {:title => 'kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+      game_attributes = {:title => 'kinigito', :instructions => 'odigies gia to kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
 
       post :create, :game => game_attributes
 
@@ -129,6 +129,17 @@ describe GamesController do
 
       assigned_game = assigns(:game)
       assigned_game.errors[:description].should include "can't be blank"
+    end
+
+    it 'should not create a new game without instructions' do
+      game_attributes = {:title => 'krifto', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+
+      lambda do
+        post :create, :game => game_attributes
+      end.should change{ Game.count }.by(0)
+
+      assigned_game = assigns(:game)
+      assigned_game.errors[:instructions].should include "can't be blank"
     end
 
     it 'should not create a new game without a user id' do
