@@ -11,6 +11,7 @@ group :development, :test do
   gem 'rspec-on-rails-matchers'
   gem 'shoulda-matchers'
   gem 'factory_girl'
+  gem 'database_cleaner'
 end
 
 # Gems used only for assets and not required

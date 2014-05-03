@@ -1,7 +1,7 @@
-puts 'seeding Users...'
+puts 'seeding test Users...'
 
 users = [
-    ['nim', '1234', 'nim@mangogames.com', Rank.first]
+    ['nimakos', '1234', 'nim@mangogames.com', Rank.first]
 ]
 
 users.each do |username, password, email, rank|
@@ -16,4 +16,4 @@ users.each do |username, password, email, rank|
   end
 end
 
-puts '...end of seeding Users'
+puts '...end of seeding test Users'

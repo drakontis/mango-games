@@ -28,9 +28,7 @@ describe GamesController do
 
   context "#index" do
     it 'should get index' do
-      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
-      game.categories << @category
-      game.save!
+      game = Game.last!
 
       get :index
       assigned_games = assigns(:games)
@@ -46,11 +44,11 @@ describe GamesController do
     end
 
     it 'should get only the approved games' do
-      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game = Game.new(:title => 'kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
       game.categories << @category
       game.save!
 
-      game2 = Game.new(:title => 'krifto2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
+      game2 = Game.new(:title => 'kinigito2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
       game2.categories << @category
       game2.save!
 
@@ -64,11 +62,11 @@ describe GamesController do
     end
 
     it 'should get only the not approved games' do
-      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
+      game = Game.new(:title => 'kinigito', :description => 'perigrafi krifto', :approved => true, :user => @user)
       game.categories << @category
       game.save!
 
-      game2 = Game.new(:title => 'krifto2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
+      game2 = Game.new(:title => 'kinigito2', :description => 'perigrafi krifto2', :approved => false, :user => @user)
       game2.categories << @category
       game2.save!
 
@@ -84,7 +82,7 @@ describe GamesController do
 
   context '#create' do
     it 'should create a new game' do
-      game_attributes = {:title => 'krifto', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+      game_attributes = {:title => 'kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
 
       lambda do
         post :create, :game => game_attributes
@@ -92,17 +90,17 @@ describe GamesController do
     end
 
     it 'should create a new game instance' do
-      game_attributes = {:title => 'krifto', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+      game_attributes = {:title => 'kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
 
       post :create, :game => game_attributes
 
       assigned_game = assigns(:game)
       assigned_game.should_not be_nil
-      assigned_game.title.should == 'krifto'
+      assigned_game.title.should == 'kinigito'
     end
 
     it 'should redirect_to edit_game_path' do
-      game_attributes = {:title => 'krifto', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
+      game_attributes = {:title => 'kinigito', :description => 'perigrafi gia to krifto', :user_id => @user.id, :category_ids => [@category.id]}
 
       post :create, :game => game_attributes
 
@@ -155,9 +153,7 @@ describe GamesController do
 
   context '#show' do
     it 'should get show' do
-      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
-      game.categories << @category
-      game.save!
+      game = Game.last!
 
       get :show, :id => game.id
 
@@ -170,9 +166,7 @@ describe GamesController do
 
   context '#edit' do
     it 'should get edit' do
-      game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
-      game.categories << @category
-      game.save!
+      game = Game.last!
 
       get :edit, :id => game.id
 
@@ -185,9 +179,7 @@ describe GamesController do
 
   context '#update' do
     before do
-      @game = Game.new(:title => 'krifto', :description => 'perigrafi krifto', :approved => true, :user => @user)
-      @game.categories << @category
-      @game.save!
+      @game = Game.last!
     end
 
     it "should update an existing game's title" do

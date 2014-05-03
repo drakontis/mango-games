@@ -1,4 +1,4 @@
-puts 'seeding ranks...'
+puts 'seeding test ranks...'
 
 ranks = [
     [0, 'Banned'],

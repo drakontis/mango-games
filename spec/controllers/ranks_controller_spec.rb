@@ -17,8 +17,7 @@ describe RanksController do
 
   context "index" do
     it 'should get index' do
-      rank = Rank.new(:code => 0, :name => 'aname')
-      rank.save.should be_true
+      rank = Rank.last!
 
       get :index
       assigned_ranks = assigns(:ranks)
@@ -35,7 +34,7 @@ describe RanksController do
 
   context 'create' do
     it 'should create a new rank' do
-      rank_attributes = {:code => 0, :name => 'name'}
+      rank_attributes = {:code => 100, :name => 'name'}
 
       lambda do
         post :create, :rank => rank_attributes
@@ -53,7 +52,7 @@ describe RanksController do
     end
 
     it 'should redirect_to edit_rank_path' do
-      rank_attributes = {:code => 0, :name => 'name'}
+      rank_attributes = {:code => 100, :name => 'name'}
 
       post :create, :rank => rank_attributes
 
@@ -81,8 +80,7 @@ describe RanksController do
 
   context 'edit' do
     it 'should get edit' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       get :edit, :id => rank.id
       assigned_rank = assigns(:rank)
@@ -91,8 +89,7 @@ describe RanksController do
     end
 
     it 'should respond with 200' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       get :edit, :id => rank.id
       response.status.should == 200
@@ -101,8 +98,7 @@ describe RanksController do
 
   context 'Update' do
     it "should update an existing rank's code" do
-      rank = Rank.new(:code => '0', :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       post :update, :id => rank.id, :rank => {:code => '1'}
 
@@ -111,8 +107,7 @@ describe RanksController do
     end
 
     it "should update an existing rank's name" do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       post :update, :id => rank.id, :rank => {:name => 'another_name'}
 
@@ -121,8 +116,7 @@ describe RanksController do
     end
 
     it 'should redirect to edit rank path' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       post :update, :id => rank.id, :rank => {:name => 'another_name'}
 
@@ -131,8 +125,7 @@ describe RanksController do
     end
 
     it 'should render edit if update fails' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       Rank.any_instance.stub(:update_attributes!).and_return false
       post :update, :id => rank.id
@@ -144,8 +137,7 @@ describe RanksController do
 
   context 'destroy' do
     it 'should find the correct rank' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       delete :destroy, :id => rank.id
       assigned_rank = assigns(:rank)
@@ -153,8 +145,7 @@ describe RanksController do
     end
 
     it 'should destroy a rank' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       lambda do
         delete :destroy, :id => rank.id
@@ -162,8 +153,7 @@ describe RanksController do
     end
 
     it 'should redirect to ranks_path' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
 
       delete :destroy, :id => rank.id
       response.should redirect_to ranks_path
@@ -171,8 +161,7 @@ describe RanksController do
     end
 
     it 'should render index if destroy fails' do
-      rank = Rank.new(:code => 0, :name => 'name')
-      rank.save.should be_true
+      rank = Rank.last!
       Rank.any_instance.stub(:destroy).and_return false
 
       delete :destroy, :id => rank.id
