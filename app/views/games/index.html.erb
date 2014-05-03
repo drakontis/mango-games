@@ -9,7 +9,7 @@
   <% @games.each do |game| %>
       <tr>
         <td><%= link_to game.title, game_path(game) %></td>
-        <td><%= game.description[0..100] %></td>
+        <td><%= (sanitize game.description[0..100]) %></td>
         <td><%= game.user.username %></td>
       </tr>
   <% end %>
