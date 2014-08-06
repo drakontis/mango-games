@@ -1,1 +1,1 @@
-rvm ruby-1.9.3-p484@games
+rvm ruby-2.1.2@games --create
