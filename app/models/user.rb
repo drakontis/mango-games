@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def root?
+    username == 'root' || username == 'Root'
+  end
+
   private
 
   def password_must_be_present

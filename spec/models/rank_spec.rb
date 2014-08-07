@@ -11,7 +11,9 @@ describe Rank do
   end
 
   context "Mass assignment" do
-    it { should allow_mass_assignment_of :code }
-    it { should allow_mass_assignment_of :name }
+    it { should allow_mass_assignment_of :code                       }
+    it { should allow_mass_assignment_of :name                       }
+    it { should allow_mass_assignment_of :rank_privileges            }
+    it { should allow_mass_assignment_of :rank_privileges_attributes }
   end
 end

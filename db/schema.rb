@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140427110718) do
+ActiveRecord::Schema.define(:version => 20140807133747) do
 
   create_table "categories", :force => true do |t|
     t.string   "code",       :null => false
@@ -79,6 +79,17 @@ ActiveRecord::Schema.define(:version => 20140427110718) do
   add_index "images", ["game_id"], :name => "images_game_fk"
   add_index "images", ["user_id"], :name => "images_user_fk"
 
+  create_table "rank_privileges", :force => true do |t|
+    t.integer  "rank_id",                  :null => false
+    t.string   "model",      :limit => 64, :null => false
+    t.string   "action",     :limit => 32, :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "rank_privileges", ["model", "action", "rank_id"], :name => "rank_privileges_model_action_rank_uidx", :unique => true
+  add_index "rank_privileges", ["rank_id"], :name => "rank_privileges_rank_fk"
+
   create_table "ranks", :force => true do |t|
     t.integer  "code",       :null => false
     t.string   "name"
@@ -113,6 +124,8 @@ ActiveRecord::Schema.define(:version => 20140427110718) do
 
   add_foreign_key "images", "games", :name => "images_game_fk"
   add_foreign_key "images", "users", :name => "images_user_fk"
+
+  add_foreign_key "rank_privileges", "ranks", :name => "rank_privileges_rank_fk"
 
   add_foreign_key "users", "ranks", :name => "users_rank_fk"
 

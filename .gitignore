@@ -17,3 +17,13 @@
 
 # Ignore Database.yml
 /config/database.yml
+
+# Ignore temp directories
+tmp/cache/saas
+tmp/cache/assets
+tmp/cache/sass
+tmp/capybara
+tmp/refunds_reporter*
+tmp/ExtraRefundsToBank*
+tmp/task_list_view_reporter*
+tmp/pids/server.pid

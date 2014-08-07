@@ -1,5 +1,8 @@
 <%= simple_form_for @rank do |f| %>
     <%= f.input :code %>
     <%= f.input :name %>
+
+    <%= select_tag :rank_privileges, options_from_collection_for_select(@privileges, :id, :privilege_label, (@rank.rank_privileges.map{|l| "#{l.model}/#{l.action}"} unless @rank.nil? || @rank.rank_privileges.nil?)), :include_blank => true, :multiple => true, 'data-placeholder' => "Privileges", :class => "has-chosen" %>
+
     <%= f.button :submit, "#{f.object.new_record? ? "Create" : "Update"}", class: "btn btn-success" %>
 <% end %>
