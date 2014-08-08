@@ -360,6 +360,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.9, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.13, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nilify_blanks (v1.1.0, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="paperclip (v3.5.2, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-2.1.2 [games]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.5, RVM: ruby-2.1.2 [games]) [gem]" level="application" />

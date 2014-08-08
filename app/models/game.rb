@@ -27,4 +27,6 @@ class Game < ActiveRecord::Base
   def average_rating
     ratings.size.zero? ? 0 : (ratings.sum(:score).to_f / ratings.size)
   end
+
+  nilify_blanks
 end

@@ -12,4 +12,6 @@ class Comment < ActiveRecord::Base
 
   belongs_to :user, :class_name => 'User'
   belongs_to :game, :class_name => 'Game'
+
+  nilify_blanks
 end

@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
 
   validate  :password_must_be_present
 
+  nilify_blanks
+
   class << self
     def authenticate(username, password)
       if user = find_by_username(username)

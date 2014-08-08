@@ -12,6 +12,8 @@ class RankPrivilege < ActiveRecord::Base
   validates :action, :presence => true, :length => {:maximum => 32}, :uniqueness => {:scope => [:rank_id, :model]}
   validate  :action_from_list
 
+  nilify_blanks
+
   def model_label
     return @model_label = Ability.model_label(model) unless @model_label.present?
     @model_label

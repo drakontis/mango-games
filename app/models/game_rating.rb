@@ -12,4 +12,5 @@ class GameRating < ActiveRecord::Base
   validates :game_id,  :presence => true, :uniqueness => { :scope => :user_id }
   validates :score,    :presence => true
 
+  nilify_blanks
 end

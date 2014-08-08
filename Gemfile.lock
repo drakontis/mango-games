@@ -80,6 +80,9 @@ GEM
     mime-types (1.25)
     multi_json (1.7.9)
     mysql2 (0.3.13)
+    nilify_blanks (1.1.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -170,6 +173,7 @@ DEPENDENCIES
   foreigner
   jquery-rails
   mysql2
+  nilify_blanks
   paperclip (~> 3.0)
   rails (= 3.2.12)
   rspec-on-rails-matchers
