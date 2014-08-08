@@ -12,6 +12,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl'
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required
