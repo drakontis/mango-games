@@ -1,4 +1,9 @@
 class SessionsController < ApplicationController
+  skip_before_filter :authenticate
+  skip_before_filter :build_resource_class
+  skip_before_filter :build_resource_instance
+  skip_before_filter :authorize_person
+
   def new
   end
 
