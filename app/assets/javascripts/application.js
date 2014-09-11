@@ -13,7 +13,7 @@
 // Loads all Bootstrap javascripts
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap-sprockets
 //= require chosen-jquery
 //= require jquery.raty.min.js
 //= require tinymce-jquery

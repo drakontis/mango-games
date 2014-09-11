@@ -13,10 +13,8 @@
  *= require_tree .
  */
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
-
-@import "bootstrap-responsive";
-
 
 .nav li.dropdown ul.dropdown-menu li:HOVER ul {
   display:block;
