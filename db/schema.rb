@@ -111,22 +111,22 @@ ActiveRecord::Schema.define(:version => 20140807133747) do
 
   add_index "users", ["rank_id"], :name => "users_rank_fk"
 
-  add_foreign_key "categories_games", "categories", :name => "categories_games_category_fk"
-  add_foreign_key "categories_games", "games", :name => "categories_games_game_fk"
+  add_foreign_key "categories_games", "categories", name: "categories_games_category_fk"
+  add_foreign_key "categories_games", "games", name: "categories_games_game_fk"
 
-  add_foreign_key "comments", "games", :name => "comments_game_fk"
-  add_foreign_key "comments", "users", :name => "comments_user_fk"
+  add_foreign_key "comments", "games", name: "comments_game_fk"
+  add_foreign_key "comments", "users", name: "comments_user_fk"
 
-  add_foreign_key "game_ratings", "games", :name => "game_ratings_game_fk"
-  add_foreign_key "game_ratings", "users", :name => "game_ratings_user_fk"
+  add_foreign_key "game_ratings", "games", name: "game_ratings_game_fk"
+  add_foreign_key "game_ratings", "users", name: "game_ratings_user_fk"
 
-  add_foreign_key "games", "users", :name => "games_user_fk"
+  add_foreign_key "games", "users", name: "games_user_fk"
 
-  add_foreign_key "images", "games", :name => "images_game_fk"
-  add_foreign_key "images", "users", :name => "images_user_fk"
+  add_foreign_key "images", "games", name: "images_game_fk"
+  add_foreign_key "images", "users", name: "images_user_fk"
 
-  add_foreign_key "rank_privileges", "ranks", :name => "rank_privileges_rank_fk"
+  add_foreign_key "rank_privileges", "ranks", name: "rank_privileges_rank_fk"
 
-  add_foreign_key "users", "ranks", :name => "users_rank_fk"
+  add_foreign_key "users", "ranks", name: "users_rank_fk"
 
 end

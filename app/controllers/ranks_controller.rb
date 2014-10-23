@@ -4,6 +4,7 @@ class RanksController < ApplicationController
   end
 
   def new
+    prepare_render
     @rank = Rank.new
   end
 
