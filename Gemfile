@@ -6,7 +6,7 @@ gem 'mysql2'
 
 # Gems for development and test environments
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~>2.14.0'
   gem 'validator_attachment'
   gem 'rspec-on-rails-matchers'
   gem 'shoulda-matchers'
