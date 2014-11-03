@@ -2,6 +2,10 @@ require "spec_helper"
 
 describe GamesController do
   before do
+    login_without_capybara
+  end
+
+  before do
     rank = Rank.new(:code => 1, :name => 'moderator')
     rank.save!
 

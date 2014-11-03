@@ -99,7 +99,7 @@ class Ability
 
   def define_user_abilities(user)
 
-    user.rank_privileges.each do |rp|
+    user.rank.rank_privileges.each do |rp|
       if self.class.action_available_to_model?(rp.action, rp.model)
         can rp.action.to_sym, rp.model == 'all' ? :all : rp.model.constantize
       end

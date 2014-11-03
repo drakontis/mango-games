@@ -1,7 +1,8 @@
 puts 'seeding test Users...'
 
 users = [
-    ['nimakos', '1234', 'nim@mangogames.com', Rank.first]
+    ['nimakos', '1234', 'nim@mangogames.com', Rank.first],
+    ['Root', 'Root', 'root@mangogames.com', Rank.where(:name => 'Administrator').first]
 ]
 
 users.each do |username, password, email, rank|

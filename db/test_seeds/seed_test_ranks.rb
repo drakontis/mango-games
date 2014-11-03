@@ -5,7 +5,8 @@ ranks = [
     [5, 'User'],
     [10, 'Super User'],
     [15, 'Moderator'],
-    [20, 'Administrator']
+    [20, 'Administrator'],
+    [-1, 'Unused']
 ]
 
 ranks.each do |code, name|

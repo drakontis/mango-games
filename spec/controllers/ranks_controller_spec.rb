@@ -1,6 +1,11 @@
 require "spec_helper"
 
 describe RanksController do
+
+  before do
+    login_without_capybara
+  end
+
   context "#new" do
     it 'should get new' do
       get :new
@@ -137,7 +142,7 @@ describe RanksController do
 
   context 'destroy' do
     it 'should find the correct rank' do
-      rank = Rank.last!
+      rank = Rank.find_by_name('Unused')
 
       delete :destroy, :id => rank.id
       assigned_rank = assigns(:rank)
@@ -145,7 +150,7 @@ describe RanksController do
     end
 
     it 'should destroy a rank' do
-      rank = Rank.last!
+      rank = Rank.find_by_name('Unused')
 
       lambda do
         delete :destroy, :id => rank.id
@@ -153,7 +158,7 @@ describe RanksController do
     end
 
     it 'should redirect to ranks_path' do
-      rank = Rank.last!
+      rank = Rank.find_by_name('Unused')
 
       delete :destroy, :id => rank.id
       response.should redirect_to ranks_path

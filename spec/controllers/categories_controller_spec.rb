@@ -1,6 +1,11 @@
 require "spec_helper"
 
 describe CategoriesController do
+
+  before do
+    login_without_capybara
+  end
+
   context "#new" do
     it 'should get new' do
       get :new
